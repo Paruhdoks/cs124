@@ -80,7 +80,7 @@ input[type=text] {
     padding-left: 20px;
 }
 
-/* MOSTLY TAKEN FROM https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+/* ADAPTED FROM https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
 
 input[type=checkbox] {
     visibility: hidden;
