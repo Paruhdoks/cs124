@@ -1,7 +1,7 @@
 # Design 
 
 ## Design Decisions
-![Our color palette.](./screenshots/cs124-palette.png)
+![Our color palette.](./screenshots/cs124-palette.PNG)
 
 We decided to choose a soothing dark mode theme in order to reduce eye strain on users (and because we liked it). We decided to restrict our color palette to only four colors in order to remain consistent: grey, slightly darker grey, mint green, and white. 
 
@@ -45,7 +45,7 @@ Yay, your task has been added.
 
 ### Adding to an existing list
 
-![An existing list.](./screenshots/eat-lunch-before.png)
+![An existing list.](./screenshots/eat-lunch-before.PNG)
 
 _Figure 2a: An existing list_
 
