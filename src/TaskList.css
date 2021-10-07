@@ -1,0 +1,18 @@
+/* task list */
+
+#task-list-area {
+    flex: auto;
+}
+#empty-list-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+#task-list-area ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}

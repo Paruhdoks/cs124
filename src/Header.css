@@ -1,0 +1,12 @@
+header {
+    flex: initial;
+    border-bottom: 10px solid #3F494B;
+    text-align: center;
+}
+
+header h1 {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    font-variant: small-caps;
+    color: #86BDA8;
+}

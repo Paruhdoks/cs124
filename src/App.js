@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {TaskList} from "./TaskList";
+import {Header} from "./Header";
+import {Footer} from "./Footer";
+import {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+    const [onlyIncomplete, setOnlyIncomplete] = useState(false);
+    const [editedItem, setEditedItem] = useState(null);
+    const [taskData, setTaskData] = useState(props.tasks);
+
+    function toggleTaskAsComplete(taskId) {
+        setTaskData(taskData.map(
+            task => task.id !== taskId ? task : {...task, completed: !task.completed}
+        ))
+    }
+
+    return (
+        <div className="App">
+            <Header title={"List of Tasks"}/>
+            <TaskList tasks={taskData} onlyIncomplete={onlyIncomplete} toggleTaskAsComplete={toggleTaskAsComplete}></TaskList>
+            <Footer onlyIncomplete={onlyIncomplete} setOnlyIncomplete={setOnlyIncomplete}/>
+        </div>
+    );
 }
 
-export default App;
+    export default App;
