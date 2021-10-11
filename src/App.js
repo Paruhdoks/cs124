@@ -3,56 +3,33 @@ import {TaskList} from "./TaskList";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
 import {useState} from "react";
-import {generateUniqueID} from "web-vitals/dist/modules/lib/generateUniqueID";
 
 function App(props) {
     const [onlyIncomplete, setOnlyIncomplete] = useState(false);
     const [editedItem, setEditedItem] = useState(null);
-    const [taskData, setTaskData] = useState(props.tasks);
-
-    function toggleTaskAsComplete(taskId) {
-        setTaskData(taskData.map(
-            task => task.id !== taskId ? task : {...task, completed: !task.completed}
-        ))
-    }
-
-    function deleteTask(taskId) {
-        setTaskData(taskData.filter(
-            task => task.id !== taskId
-        ))
-    }
 
     function deleteAllCompleted() {
-        setTaskData(taskData.filter(
-            task => !task.completed
-        ))
+        console.log(props.tasks.filter(
+            task => task.completed
+        ).map(task => task.id));
+        props.onItemsDeleted(props.tasks.filter(
+            task => task.completed
+        ).map(task => task.id))
     }
 
     function addTask() {
-        const id = generateUniqueID();
-        setTaskData([...taskData, {
-            name: "",
-            id: id,
-            completed: false
-        }])
+        const id = props.onItemAdded();
         setEditedItem(id);
-    }
-
-    function editTaskName(taskId, newName) {
-        setTaskData(taskData.map(
-            task => task.id !== taskId ? task : {...task, name: newName}
-        ))
-    }
-
-    function resetEditedItem() {
-        setEditedItem(null);
     }
 
     return (
         <div className="App">
             <Header title={"List of Tasks"}/>
-            <TaskList tasks={taskData} onlyIncomplete={onlyIncomplete} toggleTaskAsComplete={toggleTaskAsComplete}
-                      deleteTask={deleteTask} editTaskName={editTaskName} setEdit={setEditedItem} editedItem={editedItem} resetEditedItem={resetEditedItem}></TaskList>
+            <TaskList tasks={props.tasks} onlyIncomplete={onlyIncomplete}
+                      toggleTaskAsComplete={(id, value) => props.onItemChanged(id, "completed", value)}
+                      deleteTask={props.onItemsDeleted}
+                      editTaskName={(id, value) => props.onItemChanged(id, "name", value)} setEdit={setEditedItem}
+                      editedItem={editedItem} resetEditedItem={()=> setEditedItem(null)}></TaskList>
             <Footer onlyIncomplete={onlyIncomplete} setOnlyIncomplete={setOnlyIncomplete}
                     deleteAllCompleted={deleteAllCompleted} addTask={addTask}/>
         </div>
