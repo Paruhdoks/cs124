@@ -3,6 +3,10 @@
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
+}
+
+.main-app {
+    height:inherit;
     display: flex;
     flex-direction: column;
     align-content: space-between;

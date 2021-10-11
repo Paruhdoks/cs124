@@ -7,7 +7,7 @@ export function TaskList(props) {
     const taskDivs = tasks.map(task => (
         <Task {...task} clickHandler={() => props.toggleTaskAsComplete(task.id, !task.completed)} key={task.id}
               edited = {props.editedItem === task.id}
-              deleteTask={() => props.deleteTask([task.id])}
+              deleteTask={() => props.deleteTask(task)}
               resetEditedItem={props.resetEditedItem}
               editTaskName={(newValue) => props.editTaskName(task.id, newValue)} setEditedItem={() => props.setEdit(task.id)}/>
     ));
