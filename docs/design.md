@@ -21,6 +21,17 @@ For the toggled version of the aforementioned button, we considered also using a
 
 Initially, our design had the edit and delete options swapped on the task options. We decided instead that edit should be on the left, closer to the text that you're editing, and delete should be further to the side of the screen, so you're less likely to accidentally click it. 
 
+## User Testing
+### Test Subject One: Mads's suitemate, Fontaine
+Fontaine thought our app design was "sick," and noted that the buttons' functions were intuitive. 
+In particular, he said that the eye button's change in design when toggled helped him to understand its function, despite initial confusion.
+He was interested in what it would look like at different screen sizes, so we changed it from Moto G4 to a few different smartphone options on the market, for curiosity's sake.
+### Test Subject Two: Mads's other suitemate's girlfriend, Sath
+Sath said our design was "neat."
+There was slightly more friction in understanding the function of some of the buttons (particularly, view all/delete all buttons).
+However, after toggling the view button a few times and noting the change in the icon, she did, in fact, guess its functionality correctly. 
+
+
 ## Final Design
     
 ### Adding to an empty list
@@ -115,7 +126,7 @@ _Figure 6a: Before selecting "delete all completed"_
 
 Clicking on the trash can with check box icon in the bottom left hand corner will lead to the following screen with a confirmation pop-up:
 
-![After selecting "delete all uncompleted".]( ) // Screenshot Needed
+![After selecting "delete all uncompleted".](./screenshots/delete-all-completed-popup.PNG)
 
 _Figure 6b: After selecting "delete all completed"_
 
@@ -126,6 +137,27 @@ In order to confirm deletion, users will need to click on the "trash" icon, lead
 _Figure 6c: After selecting the "trash" icon on the confirmation pop-up_
 
 Yay, you have deleted all completed tasks.
+
+### Deleting One Task
+
+![Before selecting "delete".](./screenshots/delete-lunch.PNG)
+
+_Figure 7: Before selecting "delete"_
+
+Clicking on the trash can next to a task will bring up the following confirmation pop-up featuring the task's text.
+
+### Resizing of edit box
+
+We saw that sometimes, the text in the edit box would start "scrolling" off the viewable area. We saw on Piazza that another group was asking about ways to fix this, and decided to implement it ourselves as well.
+
+![Before the change.](./screenshots/edit-before.png)
+
+_Figure 8a: Before the change_
+
+![After the change.](./screenshots/edit-after.png)
+
+_Figure 8b: After the change_
+
 
 ## Challenges
 One challenge was designing checkboxes that would fit with the overall aesthetic of the rest of our UI. The default checkboxes with HTML don't fit our "dark mode" theme and are inconsistent across browsers. Thus, An adapted some available code for custom checkboxes in order to improve the overall quality of our design.
