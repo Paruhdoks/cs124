@@ -1,5 +1,6 @@
 import './Task.css';
 import {useEffect, useRef} from "react";
+import TextareaAutosize from 'react-textarea-autosize';
 import editIcon from "./icons/edit-icon.png";
 import deleteIcon from "./icons/delete-icon.png";
 
@@ -16,7 +17,7 @@ export function Task(props) {
                    checked={props.completed}/>
             <div className="checkbox"></div>
             {props.edited ?
-                <input type="text" ref={nameInput} value={props.name} onChange={(e) => props.editTaskName(e.target.value)} onBlur={props.resetEditedItem}></input> :
+                <TextareaAutosize ref={nameInput} value={props.name}  onChange={(e) => props.editTaskName(e.target.value)} onBlur={props.resetEditedItem} /> :
                 <span className="label-text">{props.name}</span>}
         </label>
         <div className="edit-delete">
