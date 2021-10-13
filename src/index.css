@@ -1,0 +1,26 @@
+/* main body */
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(./fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: inherit;
+}
+
+body {
+  height: inherit;
+  background-color: #34393A;
+  width: 100%;
+  margin: 0;
+}
+
+img:hover {
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+  transition: 0.2s ease-in-out;
+}
