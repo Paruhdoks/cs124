@@ -113,11 +113,17 @@ Yay, now you can only see uncompleted tasks. Additionally, the icon has changed:
 
 _Figure 6a: Before selecting "delete all completed"_
 
-Clicking on the trash can with check box icon in the bottom left hand corner will lead to the following screen:
+Clicking on the trash can with check box icon in the bottom left hand corner will lead to the following screen with a confirmation pop-up:
 
-![After selecting "delete all uncompleted".](./screenshots/delete-all-completed.png)
+![After selecting "delete all uncompleted".]( ) // Screenshot Needed
 
 _Figure 6b: After selecting "delete all completed"_
+
+In order to confirm deletion, users will need to click on the "trash" icon, leading to the following screen:
+
+![After selecting the "trash" icon on the confirmation pop-up.](./screenshots/delete-all-completed.png)
+
+_Figure 6c: After selecting the "trash" icon on the confirmation pop-up_
 
 Yay, you have deleted all completed tasks.
 
