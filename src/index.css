@@ -1,4 +1,9 @@
 /* main body */
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url(./fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
 html {
   height: 100%;
 }
