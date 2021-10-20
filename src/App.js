@@ -30,6 +30,7 @@ function App(props) {
                 <TaskList tasks={props.tasks} onlyIncomplete={onlyIncomplete}
                           toggleTaskAsComplete={(id, value) => props.onItemChanged(id, "completed", value)}
                           deleteTask={(task) => setDeleteTaskAlert(task)}
+                          editPriority={(id, value) => props.onItemChanged(id, "priority", value)}
                           editTaskName={(id, value) => props.onItemChanged(id, "name", value)} setEdit={setEditedItem}
                           editedItem={editedItem} resetEditedItem={() => setEditedItem(null)}></TaskList>
                 <Footer onlyIncomplete={onlyIncomplete} setOnlyIncomplete={setOnlyIncomplete}

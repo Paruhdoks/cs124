@@ -2,12 +2,12 @@
 
 #task-list-area {
     flex: auto;
+    display: flex;
 }
 #empty-list-text {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 20%;
+    align-self: center;
+    width:100%;
 }
 
 #task-list-area ul {
