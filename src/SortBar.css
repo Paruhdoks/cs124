@@ -1,0 +1,10 @@
+#sort-bar {
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+.current-sort {
+    color: #86bda8;
+}

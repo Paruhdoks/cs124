@@ -5,6 +5,7 @@ import {Footer} from "./Footer";
 import {DeleteAllAlert} from "./DeleteAllAlert";
 import {DeleteTaskAlert} from "./DeleteTaskAlert";
 import {useState} from "react";
+import {SortBar} from "./SortBar";
 
 function App(props) {
     const [onlyIncomplete, setOnlyIncomplete] = useState(false);
@@ -27,6 +28,7 @@ function App(props) {
         <div className="App">
             <div className={"main-app"}>
                 <Header title={"List of Tasks"}/>
+                <SortBar sortOptions={props.sortOptions} setSortOptions={props.setSortOptions}></SortBar>
                 <TaskList tasks={props.tasks} onlyIncomplete={onlyIncomplete}
                           toggleTaskAsComplete={(id, value) => props.onItemChanged(id, "completed", value)}
                           deleteTask={(task) => setDeleteTaskAlert(task)}

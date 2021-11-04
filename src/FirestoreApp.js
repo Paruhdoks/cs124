@@ -3,6 +3,7 @@ import {generateUniqueID} from "web-vitals/dist/modules/lib/generateUniqueID";
 
 import firebase from "firebase/compat";
 import {useCollection} from "react-firebase-hooks/firestore";
+import {useState} from "react";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,7 +21,9 @@ const db = firebase.firestore();
 const collection = "Tasks";
 
 export function FirestoreApp(props) {
-    const query = db.collection(collection);
+    const [sortOptions, setSortOptions] = useState(["priority", "desc"]);
+    const [sortString, sortDirection] = sortOptions;
+    const query = db.collection(collection).orderBy(sortString, sortDirection);
     const [value, loading, error] = useCollection(query);
 
     function onItemChanged(taskId, property, newValue) {
@@ -48,5 +51,5 @@ export function FirestoreApp(props) {
     }
 
     const taskData = loading ? loading : value.docs.map((doc) => doc.data());
-    return <App tasks={taskData} onItemChanged={onItemChanged} onItemAdded={onItemAdded} onItemsDeleted={onItemsDeleted}/>
+    return <App tasks={taskData} sortOptions={sortOptions} setSortOptions={setSortOptions} onItemChanged={onItemChanged} onItemAdded={onItemAdded} onItemsDeleted={onItemsDeleted}/>
 }
