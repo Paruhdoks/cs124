@@ -138,6 +138,14 @@ _Figure 6c: After selecting the "trash" icon on the confirmation pop-up_
 
 Yay, you have deleted all completed tasks.
 
+### Deleting completed tasks: addendum
+
+We decided to add a feature that will tell you exactly how many of the tasks are selected when deleting all completed tasks.
+
+![Delete all pop-up, with numbers](./screenshots/delete-all-numbers.PNG)
+
+_Figure 6d: The "delete all completed" pop-up, now with numbers._
+
 ### Deleting One Task
 
 ![Before selecting "delete".](./screenshots/delete-lunch.PNG)
@@ -158,10 +166,29 @@ _Figure 8a: Before the change_
 
 _Figure 8b: After the change_
 
+### Priority Sorting
+
+We added the ability to choose a priority level for each task. We considered a variety of options, including flags, but ultimately chose to indicate priority level by the saturation of the box's color to keep things streamlined and save space.
+
+With the addition of this new feature, in order to exit out of editing a task, you must select the "complete editing" button, indicated by a pencil icon with a checked box.
+
+![The priority selection menu.](./screenshots/priority-menu.PNG)
+
+_Figure 9a: The priority selection menu._
+
+The top button on the screen will then pull up the sort menu:
+
+![The sorting options menu.](./screenshots/sort-menu.PNG)
+
+_Figure 9b: The sorting options menu._
+
+Now, you may choose to sort by name, date of creation, or our new priority option. The currently selected option will be highlighted in mint. The arrow on the left-hand side of the menu ribbon will toggle to sort by ascending OR descending.
+
 
 ## Challenges
 One challenge was designing checkboxes that would fit with the overall aesthetic of the rest of our UI. The default checkboxes with HTML don't fit our "dark mode" theme and are inconsistent across browsers. Thus, An adapted some available code for custom checkboxes in order to improve the overall quality of our design.
 
+Another challenge was anchoring the bottom menu bar to the bottom of the screen. Previously, when too many tasks were added, the bar would simply disappear from view, being sent to the bottom of the screen. Now, it will stay visible even when more tasks are added.
 
 ## The CROWN JEWEL of our App Design
 The icons that Mads made are our favorite part of the design. We think that the two versions of the eye icon really get the idea of "show uncompleted"/"show all" across without having to use too many words or a messy-looking, complicated icon.
