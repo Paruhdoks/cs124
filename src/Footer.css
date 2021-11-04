@@ -1,4 +1,7 @@
 footer {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
     display: flex;
     flex: initial;
     justify-content: space-between;

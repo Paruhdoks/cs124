@@ -3,6 +3,7 @@
 #task-list-area {
     flex: auto;
     display: flex;
+    overflow-y: scroll;
 }
 #empty-list-text {
     text-align: center;

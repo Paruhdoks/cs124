@@ -17,6 +17,14 @@
     justify-content: space-between;
 }
 
+.priority-label {
+    display: flex;
+    align-items: center;
+    font-variant: small-caps;
+    font-size: 1.75rem;
+
+}
+
 .priority-select{
     display: flex;
     justify-content: space-around;
