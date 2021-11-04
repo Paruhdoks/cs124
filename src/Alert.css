@@ -6,6 +6,9 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, .3);
 }
+.task-name{
+    font-variant: small-caps;
+}
 
 .modal {
     background-color: #34393A;
