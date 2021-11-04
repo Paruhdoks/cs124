@@ -1,6 +1,7 @@
 import './SortBar.css';
 import {useState} from "react";
 import sortIcon from "./icons/sort-icon.png";
+import sortCompleteIcon from "./icons/sort-complete-icon.png";
 
 export function SortBar(props) {
     const [sorting, setSorting] = useState(false);
@@ -13,7 +14,7 @@ export function SortBar(props) {
         ["created", "name", "priority"].map((s) => <div key={s} id={s}
                                                                  onClick={()=>props.setSortOptions([s, sortDirection])}
                                                                  className={sortString === s ? "current-sort" : ""}>{s}</div>)}
-        <img src={sortIcon} alt="sort" width={imgSize} height={imgSize}
+        <img src={sorting ? sortCompleteIcon : sortIcon} alt="sort" width={imgSize} height={imgSize}
              onClick={() => setSorting(!sorting)}/>
     </div>
 }

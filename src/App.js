@@ -38,7 +38,8 @@ function App(props) {
                 <Footer onlyIncomplete={onlyIncomplete} setOnlyIncomplete={setOnlyIncomplete}
                         deleteAllCompleted={() => setDeleteAllAlert(!deleteAllAlert)} addTask={addTask}/>
             </div>
-            {deleteAllAlert && <DeleteAllAlert onClose={() => setDeleteAllAlert(false)} onOK={deleteAllCompleted}/>}
+            {deleteAllAlert && <DeleteAllAlert onClose={() => setDeleteAllAlert(false)} onOK={deleteAllCompleted} tasksNumber={props.tasks.length}
+            completedTasksNumber={props.tasks.filter((task)=>(task.completed)).length}/>}
             {
                 deleteTaskAlert && <DeleteTaskAlert onClose={() => setDeleteTaskAlert(null)}
                                                     onOK={() => props.onItemsDeleted([deleteTaskAlert.id])}

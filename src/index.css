@@ -19,8 +19,8 @@ body {
   margin: 0;
 }
 
-img:hover {
-  filter: brightness(50%);
-  -webkit-filter: brightness(50%);
-  transition: 0.2s ease-in-out;
-}
+/*img:hover {*/
+/*  filter: brightness(50%);*/
+/*  -webkit-filter: brightness(50%);*/
+/*  transition: 0.2s ease-in-out;*/
+/*}*/
