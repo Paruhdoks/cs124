@@ -18,13 +18,22 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-const collection = "Tasks";
 
 export function FirestoreApp(props) {
+    const [collections, setCollections] = useState(["Tasks", "Stuff", "Items"]);
+    const [collection, setCollection] = useState("Tasks");
     const [sortOptions, setSortOptions] = useState(["priority", "desc"]);
     const [sortString, sortDirection] = sortOptions;
     const query = db.collection(collection).orderBy(sortString, sortDirection);
     const [value, loading, error] = useCollection(query);
+
+    function onCollectionsAdded(name) {
+        setCollections([...collections, name]);
+    }
+
+    function onCollectionsDeleted(name) {
+        setCollections(collections.filter((c) => c !== name));
+    }
 
     function onItemChanged(taskId, property, newValue) {
         db.collection(collection).doc(taskId).update({[property]: newValue});
@@ -51,5 +60,11 @@ export function FirestoreApp(props) {
     }
 
     const taskData = loading ? loading : value.docs.map((doc) => doc.data());
-    return <App tasks={taskData} sortOptions={sortOptions} setSortOptions={setSortOptions} onItemChanged={onItemChanged} onItemAdded={onItemAdded} onItemsDeleted={onItemsDeleted}/>
+    return <App setCollection={setCollection} collection={collection} tasks={taskData} sortOptions={sortOptions}
+                setSortOptions={setSortOptions} onItemChanged={onItemChanged} onItemAdded={onItemAdded}
+                onItemsDeleted={onItemsDeleted}
+                onCollectionsAdded={onCollectionsAdded}
+                onCollectionsDeleted={onCollectionsDeleted}
+                collections = {collections}
+    />
 }

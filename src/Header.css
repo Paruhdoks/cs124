@@ -1,6 +1,5 @@
 header {
     flex: initial;
-    border-bottom: 5px solid #3F494B;
     text-align: center;
 }
 
@@ -9,4 +8,8 @@ header h1 {
     margin-block-end: 10px;
     font-variant: small-caps;
     color: #86BDA8;
+}
+
+#header-triangle {
+    font-size: 0.65em;
 }

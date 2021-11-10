@@ -1,0 +1,18 @@
+
+.task-name{
+    font-variant: small-caps;
+}
+
+.delete-modal {
+    background-color: #34393A;
+    text-align: center;
+    border-radius: 5pt  ;
+    border-color: #86BDA8;
+    border-style: solid;
+    margin: 0 auto;
+    top: 30vh;
+    height: 100pt;
+    width: 200pt;
+    padding: 10pt;
+    position: relative;
+}
