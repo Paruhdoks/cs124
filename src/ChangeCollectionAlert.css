@@ -3,7 +3,7 @@
 }
 
 .change-collection-modal {
-    background-color: #34393A;
+    background-color: #252627;
     border-radius: 5pt;
     border-color: #86BDA8;
     border-style: solid;
@@ -24,7 +24,7 @@
 }
 
 #collections-list li {
-    border: 2px solid #3F494B;
+    border: 2px solid #34393A;
     padding: 5px;
 }
 

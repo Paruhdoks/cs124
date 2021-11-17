@@ -1,5 +1,5 @@
 #task-list li {
-    border: 2px solid #3F494B;
+    border: 2px solid #34393A;
     padding: 5px;
 }
 
@@ -22,14 +22,12 @@
     align-items: center;
     font-variant: small-caps;
     font-size: 1.75rem;
-
 }
 
-.priority-select{
+.priority-select {
     display: flex;
     justify-content: space-around;
 }
-
 
 .priority-box {
     margin: 0.75rem 0 0.25rem;
@@ -37,8 +35,8 @@
     flex-grow: 0;
     height: 25px;
     width: 25px;
-    background-color: #86BDA8;
-    border: 7px solid #86BDA8;
+    background-color: #86bda8;
+    border: 7px solid #86bda8;
 }
 
 .priority-box:after {
@@ -50,7 +48,7 @@
     top: -3px;
     width: 8px;
     height: 20px;
-    border: solid #34393A;
+    border: solid #252627;
     border-width: 0 7px 7px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -78,7 +76,7 @@
 }
 
 textarea {
-    background-color: #3F494B;
+    background-color: #252627;
     color: white;
     font-size: 20px;
     padding-left: 5px;
@@ -93,7 +91,7 @@ label {
 
 /* ADAPTED FROM https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
 
-input[type=checkbox] {
+input[type="checkbox"] {
     visibility: hidden;
     width: 0;
 }
@@ -103,13 +101,13 @@ input[type=checkbox] {
     flex-grow: 0;
     height: 25px;
     width: 25px;
-    background-color: #34393A;
+    background-color: #252627;
     margin-right: 25px;
-    border: 7px solid #86BDA8;
+    border: 7px solid #86bda8;
 }
 
 label input:checked ~ .checkbox {
-    background-color: #86BDA8;
+    background-color: #86bda8;
 }
 
 .checkbox:after {
@@ -118,7 +116,7 @@ label input:checked ~ .checkbox {
     display: none;
 }
 
-label input:checked ~.checkbox:after {
+label input:checked ~ .checkbox:after {
     display: block;
 }
 
@@ -127,7 +125,7 @@ label .checkbox:after {
     top: -3px;
     width: 8px;
     height: 20px;
-    border: solid #34393A;
+    border: solid #252627;
     border-width: 0 7px 7px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);

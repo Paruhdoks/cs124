@@ -5,7 +5,7 @@ footer {
     display: flex;
     flex: initial;
     justify-content: space-between;
-    border-top: 5px solid #3F494B;
+    border-top: 5px solid #34393A;
 }
 
 footer div {
@@ -13,9 +13,9 @@ footer div {
     text-align: center;
 }
 #delete-completed-btn {
-    border-right: 5px solid #3F494B;
+    border-right: 5px solid #34393A;
 }
 
 #show-incomplete-all-btn {
-    border-left: 5px solid #3F494B;
+    border-left: 5px solid #34393A;
 }
