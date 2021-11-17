@@ -10,6 +10,7 @@ export function Task(props) {
     useEffect(()=> {
         if(props.edited) {
             nameInput.current.focus();
+            nameInput.current.scrollIntoView();
         }
     }, [props.edited])
     return <li>

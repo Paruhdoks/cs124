@@ -39,7 +39,7 @@ function App(props) {
     return (
         <div className="App">
             <div className={"main-app"}>
-                <Header title={props.collection} onClick = {() => setChangeCollectionAlert(true)}/>
+                <Header title={props.collection} onClick={() => setChangeCollectionAlert(true)}/>
                 {isDesktopOrLaptop && footer}
                 <SortBar sortOptions={props.sortOptions} setSortOptions={props.setSortOptions}/>
                 <TaskList tasks={props.tasks} onlyIncomplete={onlyIncomplete}
@@ -60,10 +60,10 @@ function App(props) {
             }
             {
                 changeCollectionAlert && <ChangeCollectionAlert onClose={() => setChangeCollectionAlert(null)}
-                                                    onOK={props.setCollection} collection={props.collection}
-                onCollectionsAdded={props.onCollectionsAdded}
-                onCollectionsDeleted={props.onCollectionsDeleted}
-                collections={props.collections}/>
+                                                                onOK={props.setCollection} collection={props.collection}
+                                                                onCollectionsAdded={props.onCollectionsAdded}
+                                                                onCollectionsDeleted={props.onCollectionsDeleted}
+                                                                collections={props.collections}/>
             }
         </div>
     );

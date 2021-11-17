@@ -20,7 +20,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 export function FirestoreApp(props) {
-    const [collections, setCollections] = useState(["Tasks", "Stuff", "Items"]);
+    const [collections, setCollections] = useState(["Tasks"]);
     const [collection, setCollection] = useState("Tasks");
     const [sortOptions, setSortOptions] = useState(["priority", "desc"]);
     const [sortString, sortDirection] = sortOptions;
@@ -29,10 +29,6 @@ export function FirestoreApp(props) {
 
     function onCollectionsAdded(name) {
         setCollections([...collections, name]);
-    }
-
-    function onCollectionsDeleted(name) {
-        setCollections(collections.filter((c) => c !== name));
     }
 
     function onItemChanged(taskId, property, newValue) {
@@ -60,11 +56,20 @@ export function FirestoreApp(props) {
     }
 
     const taskData = loading ? loading : value.docs.map((doc) => doc.data());
+
+    function onCollectionsDeleted(name) {
+        const currentCollection = collection;
+        setCollection(name);
+        onItemsDeleted(taskData.map(task => task.id));
+        setCollections(collections.filter((c) => c !== name));
+        setCollection(currentCollection);
+    }
+
     return <App setCollection={setCollection} collection={collection} tasks={taskData} sortOptions={sortOptions}
                 setSortOptions={setSortOptions} onItemChanged={onItemChanged} onItemAdded={onItemAdded}
                 onItemsDeleted={onItemsDeleted}
                 onCollectionsAdded={onCollectionsAdded}
                 onCollectionsDeleted={onCollectionsDeleted}
-                collections = {collections}
+                collections={collections}
     />
 }

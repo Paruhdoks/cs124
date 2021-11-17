@@ -10,6 +10,7 @@ export function Alert(props) {
             <div className="alert-buttons">
                 <img src={xIcon} alt="cancel" width="45px" height="45px"
                      onClick={props.onClose}/>
+                {props.middleIcon}
                 <img src={props.deleteAlert ? deleteIcon : doneIcon} alt="confirm delete" width="45px" height="45px"
                      onClick={() => {
                          props.onClose();

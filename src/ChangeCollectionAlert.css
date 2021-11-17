@@ -22,3 +22,15 @@
 .small-caps {
     font-variant: small-caps;
 }
+
+#collections-list li {
+    border: 2px solid #3F494B;
+    padding: 5px;
+}
+
+#collections-list {
+    width: 100%;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
