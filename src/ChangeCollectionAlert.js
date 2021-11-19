@@ -11,38 +11,53 @@ export function ChangeCollectionAlert(props) {
     let [newName, setNewName] = useState("");
     let [edited, setEdited] = useState(false);
     const nameInput = useRef(null);
+
     useEffect(() => {
         if (edited) {
             nameInput.current.focus();
             nameInput.current.scrollIntoView();
         }
     }, [edited])
+
+
     return (
 
         <Alert onClose={props.onClose} onOK={() => props.onOK(selectedCollection)}
                modalClassName="change-collection-modal"
                deleteAlert={false}
-               middleIcon={<img src={addIcon} alt="cancel" width="45px" height="45px"
-                                onClick={() => setEdited(true)}/>}
+               middleIcon={<img src={addIcon} alt="cancel" width="45px" height="45px"/>}
+               middleIconOnClick={() => setEdited(true)}
         >
             <div>
                 <div className={"center-text"}>{`Which list would you like to view?`}</div>
                 <ul id={"collections-list"}>
-                    {props.collections.map((c) => <CollectionsRow setSelectedCollection={setSelectedCollection}
+                    {props.collections.map((c) => <CollectionsRow key={c} setSelectedCollection={setSelectedCollection}
+
                                                                   selected={selectedCollection === c} name={c}
-                                                                  onDelete={() => props.onCollectionsDeleted(c)}/>)}
+
+                                                                  onDelete={() => props.onCollectionsDeleted(c)}/>)
+
+                    }
                 </ul>
                 {edited &&
-                <TextareaAutosize value={newName} ref={nameInput} onChange={(e) => setNewName(e.target.value)}
+                <TextareaAutosize key={"edit"} value={newName} ref={nameInput}
+                                  onChange={(e) => setNewName(e.target.value)}
                                   onKeyPress={(e) => {
                                       if (e.key === "Enter") {
+                                          e.stopPropagation();
                                           nameInput.current.blur();
                                       }
                                   }}
-                                  onBlur={() => {
+                                  onBlur={(e) => {
                                       setEdited(false);
-                                      props.onCollectionsAdded(newName);
-                                      setSelectedCollection(newName);
+                                      if (newName === "") {
+                                          props.onCollectionsAdded("Untitled");
+                                          setSelectedCollection("Untitled");
+                                      } else {
+                                          props.onCollectionsAdded(newName);
+                                          setSelectedCollection(newName);
+                                      }
+
                                   }}
                 />}
 

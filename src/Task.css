@@ -39,7 +39,7 @@
     border: 7px solid #86bda8;
 }
 
-.priority-box:after {
+.priority-box:before {
     content: "";
     position: relative;
     display: none;
@@ -104,23 +104,24 @@ input[type="checkbox"] {
     background-color: #252627;
     margin-right: 25px;
     border: 7px solid #86bda8;
+    tab-index: 0;
 }
 
 label input:checked ~ .checkbox {
     background-color: #86bda8;
 }
 
-.checkbox:after {
+.checkbox:before {
     content: "";
     position: relative;
     display: none;
 }
 
-label input:checked ~ .checkbox:after {
+label input:checked ~ .checkbox:before {
     display: block;
 }
 
-label .checkbox:after {
+label .checkbox:before {
     left: 5px;
     top: -3px;
     width: 8px;

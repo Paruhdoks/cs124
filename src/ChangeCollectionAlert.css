@@ -14,14 +14,6 @@
     position: relative;
 }
 
-.highlighted {
-    color: #86bda8;
-    font-weight: bold;
-}
-
-.small-caps {
-    font-variant: small-caps;
-}
 
 #collections-list li {
     border: 2px solid #34393A;

@@ -4,3 +4,12 @@
     justify-content: space-between;
     height: 45px;
 }
+
+.highlighted {
+    color: #86bda8;
+    font-weight: bold;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}

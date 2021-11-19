@@ -57,12 +57,8 @@ export function FirestoreApp(props) {
 
     const taskData = loading ? loading : value.docs.map((doc) => doc.data());
 
-    function onCollectionsDeleted(name) {
-        const currentCollection = collection;
-        setCollection(name);
-        onItemsDeleted(taskData.map(task => task.id));
+    async function onCollectionsDeleted(name) {
         setCollections(collections.filter((c) => c !== name));
-        setCollection(currentCollection);
     }
 
     return <App setCollection={setCollection} collection={collection} tasks={taskData} sortOptions={sortOptions}
