@@ -14,9 +14,19 @@ html {
 
 body {
   height: inherit;
-  background-color: #34393A;
+  background-color: #252627;
   width: 100%;
   margin: 0;
+}
+button {
+  background-color: inherit;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-transform: inherit;
 }
 
 /*img:hover {*/

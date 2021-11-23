@@ -6,33 +6,13 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, .3);
 }
-.task-name{
-    font-variant: small-caps;
-}
-
-.modal {
-    background-color: #34393A;
-    text-align: center;
-    border-radius: 5pt  ;
-    border-color: #86BDA8;
-    border-style: solid;
-    margin: 0 auto;
-    top: 30vh;
-    height: 100pt;
-    width: 200pt;
-    padding: 10pt;
-    position: relative;
-}
 
 .alert-buttons {
-    position: absolute;
     display: flex;
-    bottom: 0;
-    right: 0;
     width: 100%;
     justify-content: space-between;
 }
 
-.alert-buttons * {
+.alert-buttons button {
     margin: 10px;
 }

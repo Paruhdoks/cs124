@@ -15,7 +15,7 @@ export function TaskList(props) {
               editPriority={(newValue) => props.editPriority(task.id, newValue)}
               editTaskName={(newValue) => props.editTaskName(task.id, newValue)} setEditedItem={() => props.setEdit(task.id)}/>
     ));
-    return <div id={"task-list-area"}>
+    return <div id={"task-list-area"} tabIndex={0}>
         { tasks.length === 0 ? <div id={"empty-list-text"}>Hit + to add a new task!</div> :
             <ul id={"task-list"}>{taskDivs}</ul>}
     </div>

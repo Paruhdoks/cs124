@@ -1,0 +1,28 @@
+.center-text {
+    text-align: center;
+}
+
+.change-collection-modal {
+    background-color: #252627;
+    border-radius: 5pt;
+    border-color: #86BDA8;
+    border-style: solid;
+    margin: 0 auto;
+    top: 30vh;
+    width: 70%;
+    padding: 10pt;
+    position: relative;
+}
+
+
+#collections-list li {
+    border: 2px solid #34393A;
+    padding: 5px;
+}
+
+#collections-list {
+    width: 100%;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+

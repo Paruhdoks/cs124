@@ -3,6 +3,8 @@
     justify-content: space-around;
     text-transform: capitalize;
     font-variant: small-caps;
+    border-top: #34393A 5px solid;
+    border-bottom: #34393A 5px solid;
 }
 
 .current-sort {
