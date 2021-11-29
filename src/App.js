@@ -39,7 +39,7 @@ function App(props) {
     return (
         <div className="App">
             <div className={"main-app"}>
-                <Header title={props.collection} onClick={() => setChangeCollectionAlert(true)}/>
+                <Header title={props.collection.name} onClick={() => setChangeCollectionAlert(true)}/>
                 {isDesktopOrLaptop && footer}
                 <SortBar sortOptions={props.sortOptions} setSortOptions={props.setSortOptions}/>
                 <TaskList tasks={props.tasks} onlyIncomplete={onlyIncomplete}

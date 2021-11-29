@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {FirestoreApp} from "./FirestoreApp";
+import {AuthApp} from "./FirestoreApp";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirestoreApp />
+    <AuthApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
