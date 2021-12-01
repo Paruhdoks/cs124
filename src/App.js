@@ -63,6 +63,7 @@ function App(props) {
                                                                 onOK={props.setCollection} collection={props.collection}
                                                                 onCollectionsAdded={props.onCollectionsAdded}
                                                                 onCollectionsDeleted={props.onCollectionsDeleted}
+                                                                onCollectionShared={props.onCollectionShared}
                                                                 collections={props.collections}/>
             }
         </div>

@@ -19,8 +19,6 @@ export function ChangeCollectionAlert(props) {
         }
     }, [edited])
 
-        console.log(`Alert selected: ${selectedCollection}`);
-
     return (
 
         <Alert onClose={props.onClose} onOK={() => props.onOK(selectedCollection)}
@@ -33,7 +31,7 @@ export function ChangeCollectionAlert(props) {
                 <div className={"center-text"}>{`Which list would you like to view?`}</div>
                 <ul id={"collections-list"}>
                     {props.collections.map((c) => <CollectionsRow key={c.name} setSelectedCollection={() => setSelectedCollection(c)}
-
+                                                                  onShared={(email) => props.onCollectionShared(c, email)}
                                                                   selected={selectedCollection.id === c.id} name={c.name}
 
                                                                   onDelete={() => props.onCollectionsDeleted(c)}/>)
