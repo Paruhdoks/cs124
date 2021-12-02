@@ -17,36 +17,39 @@ export function CollectionsRow(props) {
     }, [shared])
 
     return <li key={props.name}
-               className="collection-row"
     >
+        <div className="collection-row">
         <button tabIndex={1} onClick={() => props.setSelectedCollection(props.name)}
                 aria-label={"List,  " + props.name + (props.selected ? "; Currently Selected" : "; Select List")}><span
             className={props.selected ? "highlighted small-caps" : "small-caps"}>{props.name}</span></button>
-        <button tabIndex={1} onClick={() => setShared(true)}
-                aria-label={"Share List"}><img src={shareIcon}
-                                                alt="share"
-                                                width="45px"
-                                                height="45px"
-        /></button>
+        <div className={"button-group"}>
+            <button tabIndex={1} onClick={() => setShared(true)}
+                    aria-label={"Share List"}><img src={shareIcon}
+                                                   alt="share"
+                                                   width="45px"
+                                                   height="45px"
+            /></button>
+            {!props.selected &&
+            <button tabIndex={1} onClick={props.onDelete} aria-label={"Delete List, " + props.name}><img
+                src={deleteIcon} alt="cancel"
+                width="45px"
+                height="45px"
+            /></button>}</div></div>
         {shared &&
+            <div className={"email-row"}>
+                <label>Email: </label>
         <TextareaAutosize key={"edit"} value={email} ref={emailInput}
                           onChange={(e) => setEmail(e.target.value)}
                           onKeyPress={(e) => {
                               if (e.key === "Enter") {
                                   e.stopPropagation();
-                                 emailInput.current.blur();
+                                  emailInput.current.blur();
                               }
                           }}
                           onBlur={(e) => {
                               setShared(false);
                               props.onShared(email);
                           }}
-        />}
-        {!props.selected &&
-        <button tabIndex={1} onClick={props.onDelete} aria-label={"Delete List, " + props.name}><img src={deleteIcon}
-                                                                                                     alt="cancel"
-                                                                                                     width="45px"
-                                                                                                     height="45px"
-        /></button>}
+        /></div>}
     </li>
 }

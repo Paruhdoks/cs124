@@ -9,6 +9,7 @@ import {DeleteTaskAlert} from "./DeleteTaskAlert";
 import {ChangeCollectionAlert} from "./ChangeCollectionAlert";
 import {useState} from "react";
 import {SortBar} from "./SortBar";
+import {LogoutBar} from "./LogoutBar";
 
 function App(props) {
     const isDesktopOrLaptop = useMediaQuery({
@@ -39,6 +40,7 @@ function App(props) {
     return (
         <div className="App">
             <div className={"main-app"}>
+                <LogoutBar logOut={props.logOut} email={props.email} />
                 <Header title={props.collection.name} onClick={() => setChangeCollectionAlert(true)}/>
                 {isDesktopOrLaptop && footer}
                 <SortBar sortOptions={props.sortOptions} setSortOptions={props.setSortOptions}/>

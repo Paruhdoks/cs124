@@ -142,11 +142,13 @@ export function FirestoreApp(props) {
     }
 
     function onCollectionsShared(collection, email) {
-        const query =props.db.doc(`Lists/${collection.id}`).update(
-            {
-                shared: [...collection.shared, email]
-            }
-        )
+        if (email !== "") {
+            const query = props.db.doc(`Lists/${collection.id}`).update(
+                {
+                    shared: [...collection.shared, email]
+                }
+            )
+        }
     }
 
     function onItemChanged(taskId, property, newValue) {props.db.collection(`Lists/${collection.id}/tasks`).doc(taskId).update({[property]: newValue});
@@ -182,5 +184,7 @@ export function FirestoreApp(props) {
                 onCollectionsDeleted={onCollectionsDeleted}
                 onCollectionShared={onCollectionsShared}
                 collections={getCollections(collectionsSnapshot)}
+                logOut={props.logOut}
+                email={props.user.email}
     />
 }

@@ -1,3 +1,61 @@
 .AuthApp {
-    height:inherit;
+    height: inherit;
+}
+
+.login-page {
+    height: inherit;
+    width: 95%;
+    display: flex;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-variant: small-caps;
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.login-wrapper {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.login-button {
+    background-color: #86BDA8;
+    border: 0;
+    font-family: "Open Sans", sans-serif;
+    font-variant: small-caps;
+    border-radius: 1rem;
+    margin: 0.75rem;
+    padding: 1rem;
+    text-transform: inherit;
+    color: black;
+    width: 100%;
+}
+
+.app-title {
+    color: #86BDA8;
+}
+
+.form-input {
+    width: 100%;
+    display: flex;
+    margin: 0.75rem 0rem;
+}
+
+.login-input {
+    border: 1px white solid;
+    padding-left: 5px;
+    background-color: #252627;
+    color: white;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    flex-grow: 1;
+}
+
+.form-label {
+    width: auto;
+    margin-right: 1rem;
 }

@@ -1,0 +1,15 @@
+#logout-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    align-items: center;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    border-top: #34393A 5px solid;
+    border-bottom: #34393A 5px solid;
+}
+
+#logout-group {
+    display: flex;
+    align-items: center;
+}

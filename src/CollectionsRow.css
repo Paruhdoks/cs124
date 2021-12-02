@@ -5,6 +5,19 @@
     height: 45px;
 }
 
+.email-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    font-variant: small-caps;
+}
+
+.email-row label {
+    width: auto;
+    padding-right: 2rem;
+}
+
 .highlighted {
     color: #86bda8;
     font-weight: bold;
@@ -12,4 +25,8 @@
 
 .small-caps {
     font-variant: small-caps;
+}
+
+.button-group * {
+    margin-left: 0.5rem;
 }
