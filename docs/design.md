@@ -9,7 +9,7 @@ We decided to choose a soothing dark mode theme in order to reduce eye strain on
 
 Instead of words, we decided to use icons to represent each function in order to reduce visual clutter (and avoid arguments about whether "incomplete" or "uncompleted" is a better word to use). We chose our icons based on representative images for each function: A trash can for delete, a pencil for edit, a plus sign for add, etc. Some of the other buttons were a little more complicated: for "show uncompleted," we went with an icon of an eye and an unchecked box, and for "delete completed," we created an icon of a trash can with a checked box. Additionally, the "toggled" version of "show uncompleted" changes to an icon of an eye with two boxes - one checked and one unchecked - to represent that pressing it again will show all tasks, completed and uncompleted. 
 
-Consistent with many other mobile-based applications, we placed our  three main functions (delete copmleted, new task, and show uncompleted) in a menu bar across the bottom of the screen. Individual tasks appear above this menu, with their individual options (check, delete, and edit) located beside them. Each task's options are thus associated with a single task to avoid confusion with the overall main functions.
+Consistent with many other mobile-based applications, we placed our  three main functions (delete completed, new task, and show uncompleted) in a menu bar across the bottom of the screen. Individual tasks appear above this menu, with their individual options (check, delete, and edit) located beside them. Each task's options are thus associated with a single task to avoid confusion with the overall main functions.
 
 When the list is empty, we chose to put explanatory text on the screen in the task area, prompting users to use the "plus" icon to add a task to the list. We did this to reduce user confusion surrounding the concerningly empty screen.
 
@@ -210,6 +210,30 @@ Screen Reader support was added through the addition of numerous aria labels, wh
 [https://youtu.be/Y6Vc5M991T0](https://youtu.be/dN2qLjgu9Rw
 )
 
+### User Log-in
+
+When the site is first visited, users will be prompted via the following screen to either login to an existing account or sign up to create a new account:
+
+![The log-in screen.](./screenshots/login-page.PNG)
+
+_Figure 11a: The log-in screen_
+
+If a user wishes to log out of their account, they may do so by selecting the logout button or user icon in the top right-hand corner.
+
+![The log out button can be seen in the upper right-hand corner.](./screenshots/logout-option.PNG)
+
+_Figure 11b: The user log out button can be seen in the top right-hand corner_
+
+### List Sharing
+
+When selecting a list, a "share" icon can now be found next to the delete icon. Selecting this "share" button will bring up a field where users may enter the email of another user with whom they wish to share their list.
+
+![The share option in the list menu.](./screenshots/share-list.PNG)
+
+_Figure 12a: The "share" option in the list menu_
+
+Once a list is shared to another user, they will also be able to edit any of the list items.
+
 ## Challenges
 One challenge was designing checkboxes that would fit with the overall aesthetic of the rest of our UI. The default checkboxes with HTML don't fit our "dark mode" theme and are inconsistent across browsers. Thus, An adapted some available code for custom checkboxes in order to improve the overall quality of our design.
 
@@ -219,6 +243,9 @@ Our initial color scheme had to be modified slightly in order to increase contra
 
 All of our "buttons" were originally just images that would perform a function upon click; however, for the screen reader and tab navigation to recognize them as buttons, we had to change them all to true button objects. Figuring out how to reformat them to look nice still was a bit of a challenge.
 
-## The CROWN JEWEL of our App Design
+We struggled initially with deciding how to handle user logins due to the way we had structured our collections. We ended up entirely restructuring the collections, adding another overarching layer and converting our previous collections into sub-collections. 
+
+## Proud Points of our App Design
 The icons that Mads made are our favorite part of the design. We think that the two versions of the eye icon really get the idea of "show uncompleted"/"show all" across without having to use too many words or a messy-looking, complicated icon.
 
+We both find the aesthetic design of our app to be one of its strongest points. The "dark mode"-esque theme, limited color palette, sans-serif font, small caps titles, and minimalistic icons lend to a sophisticated overall mood.
