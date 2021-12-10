@@ -27,9 +27,11 @@ export function AuthApp(props) {
     const [user, loading, error] = useAuthState(auth);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    // don't let sign-up page disappear until initial task list is made
+    const [collectionInitialized, setCollectionInitialized] = useState(false);
     if (loading) {
         return <p>Checking...</p>;
-    } else if (user) {
+    } else if (user && collectionInitialized) {
         return <div className={"AuthApp"}>
             <FirestoreApp {...props} user={user} db={db} logOut={() => auth.signOut()}/>
         </div>
@@ -45,8 +47,8 @@ export function AuthApp(props) {
                 <div className={"form-input"}><label className={"form-label"} htmlFor={"password"}>Password:</label>
                 <input type={"password"} id={"password"} value={password} className={"login-input"}
                        onChange={(e) => setPassword(e.target.value)}></input></div>
-                <SignIn key="Sign In" email={email} password={password}/>
-                <SignUp key="Sign Up" email={email} password={password}/>
+                <SignIn key="Sign In" email={email} password={password} collectionInitialized = {()=>setCollectionInitialized(true)}/>
+                <SignUp key="Sign Up" email={email} password={password} collectionInitialized = {()=>setCollectionInitialized(true)}/>
             </div></div>
         </div>
     }
@@ -67,8 +69,10 @@ function SignIn(props) {
     }
     return <>
         {error && <p>Error logging in: {error.message}</p>}
-        <button className={"login-button"} onClick={() =>
-            signInWithEmailAndPassword(props.email, props.password)}>Login
+        <button className={"login-button"} onClick={() => {
+            signInWithEmailAndPassword(props.email, props.password);
+            props.collectionInitialized();
+        }}>Login
         </button>
     </>
 }
@@ -99,10 +103,10 @@ function SignUp(props) {
                         id: id,
                         name: "Tasks",
                         owner: userCredential.user.uid,
-                        shared: [userCredential.user.email],
-                        tasks: []
+                        shared: [userCredential.user.email]
                     }
                 );
+                props.collectionInitialized();
             } catch (e) {
                 setE(e.message);
                 return;
