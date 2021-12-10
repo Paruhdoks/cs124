@@ -35,20 +35,20 @@ However, after toggling the view button a few times and noting the change in the
 ## Final Design
     
 ### Adding to an empty list
-![An empty list.](./screenshots/empty-list.png)
+![An empty list.](./screenshots/empty-list.PNG)
 
 _Figure 1a: An empty list_
 
 Pressing the "plus" icon should lead to a screen like the following, on which you can enter a name for a task:
 
-![Adding the task "Buy John Grisham Book" to a new list.](./screenshots/john-grisham-adding.png)
+![Adding the task "Buy John Grisham Book" to a new list.](./screenshots/john-grisham-adding.PNG)
 
 _Figure 1b: Adding the task "Buy John Grisham Book" to a new list_
 
-Pressing "done" or "enter" on your phone keyboard, or tapping outside of the textbox, should result in the next screen:
+Pressing the "complete edit" icon, represented by a pencil with a checkmark, should result in the next screen:
 
 
-![The task "Buy John Grisham Book" has been added to a new list.](./screenshots/john-grisham-added.png)
+![The task "Buy John Grisham Book" has been added to a new list.](./screenshots/john-grisham-added.PNG)
 
 _Figure 1c: The task "Buy John Grisham Book" has been added to a new list._
 
@@ -62,69 +62,69 @@ _Figure 2a: An existing list_
 
 Pressing the "plus" icon should lead to the following screen, on which you can enter a name for a task:
 
-![Adding the task "Eat Lunch" to an existing list.](./screenshots/eat-lunch-adding.png)
+![Adding the task "Eat Lunch" to an existing list.](./screenshots/eat-lunch-adding.PNG)
 
 _Figure 2b: Adding the task "Eat Lunch" to an existing list_
 
-Then, pressing "done" or "enter" on your phone keyboard, or tapping outside of the textbox, should result in the next screen:
+Then, pressing the "complete edit" icon, represented by a pencil with a checkmark, should result in the next screen:
 
-![The task "Eat Lunch" has been added to an existing list.](./screenshots/eat-lunch-added.png)
+![The task "Eat Lunch" has been added to an existing list.](./screenshots/eat-lunch-added.PNG)
 
 _Figure 2c: The task "Eat Lunch" has been added to an existing list_
 
 Yay, your task has been added.
 
 ### Marking a task completed
-![Marking the task "Call Mom" completed.](./screenshots/eat-lunch-added.png)
+![Marking the task "Call Mom" completed.](./screenshots/eat-lunch-added.PNG)
 
 _Figure 3a: Marking the task "Call Mom" completed_
 
 Clicking the check box next to "Call Mom" will lead to the following screen:
 
-![The task "Call Mom" has been marked completed.](./screenshots/call-mom-checked.png)
+![The task "Call Mom" has been marked completed.](./screenshots/call-mom-checked.PNG)
 
 _Figure 3b: The task "Call Mom" has been marked completed_
 
 Yay, your task is now (marked as) complete!
 
 ### Renaming a task
-![An existing list, including the task "Text John".](./screenshots/call-mom-checked.png)
+![An existing list, including the task "Text John".](./screenshots/call-mom-checked.PNG)
 
 _Figure 4a: An existing list, including the task "Text John"_
 
 Clicking on the pencil icon next to the "Text John" task label will lead to the following screen:
 
-![Renaming the task "Text John".](./screenshots/text-john-renaming.png)
+![Renaming the task "Text John".](./screenshots/text-john-renaming.PNG)
 
 _Figure 4b: Renaming the task "Text John"_
 
 Then, after editing the name, pressing "done" or "enter" on your phone keyboard, or tapping outside of the textbox, should result in the next screen:
 
-![The task "Text John" has been renamed to "Text John about bank statements".](./screenshots/text-john-renamed.png)
+![The task "Text John" has been renamed to "Text John about bank statements".](./screenshots/text-john-renamed.PNG)
 
 _Figure 4c: The task "Text John" has been renamed to "Text John about bank statements"_
 
 Yay, you have renamed your task!
 
 ### Viewing uncompleted tasks
-![Before selecting "view all uncompleted".](./screenshots/text-john-renamed.png)
+![Before selecting "view all uncompleted".](./screenshots/text-john-renamed.PNG)
 
 _Figure 5a: Before selecting "view all uncompleted"_
 
-Clicking on the eye with blank check box icon in the bottom right hand corner will lead to the following screen:
+Clicking on the eye with blank check box icon in the bottom right-hand corner will lead to the following screen:
 
-![After selecting "view all uncompleted".](./screenshots/view-all-incomplete.png)
+![After selecting "view all uncompleted".](./screenshots/view-all-incomplete.PNG)
 
 _Figure 5b: After selecting "view all uncompleted"_
 
 Yay, now you can only see uncompleted tasks. Additionally, the icon has changed: if you were to tap it again, you should see all tasks again.
 
 ### Deleting completed tasks
-![Before selecting "delete all completed".](./screenshots/text-john-renamed.png)
+![Before selecting "delete all completed".](./screenshots/text-john-renamed.PNG)
 
 _Figure 6a: Before selecting "delete all completed"_
 
-Clicking on the trash can with check box icon in the bottom left hand corner will lead to the following screen with a confirmation pop-up:
+Clicking on the trash can with check box icon in the bottom left-hand corner will lead to the following screen with a confirmation pop-up:
 
 ![After selecting "delete all uncompleted".](./screenshots/delete-all-completed-popup.PNG)
 
@@ -132,19 +132,11 @@ _Figure 6b: After selecting "delete all completed"_
 
 In order to confirm deletion, users will need to click on the "trash" icon, leading to the following screen:
 
-![After selecting the "trash" icon on the confirmation pop-up.](./screenshots/delete-all-completed.png)
+![After selecting the "trash" icon on the confirmation pop-up.](./screenshots/delete-all-completed.PNG)
 
 _Figure 6c: After selecting the "trash" icon on the confirmation pop-up_
 
 Yay, you have deleted all completed tasks.
-
-### Deleting completed tasks: addendum
-
-We decided to add a feature that will tell you exactly how many of the tasks are selected when deleting all completed tasks.
-
-![Delete all pop-up, with numbers](./screenshots/delete-all-numbers.PNG)
-
-_Figure 6d: The "delete all completed" pop-up, now with numbers._
 
 ### Deleting One Task
 
@@ -152,7 +144,7 @@ _Figure 6d: The "delete all completed" pop-up, now with numbers._
 
 _Figure 7: Before selecting "delete"_
 
-Clicking on the trash can next to a task will bring up the following confirmation pop-up featuring the task's text.
+Clicking on the trash can next to a task will bring up this confirmation pop-up featuring the task's text.
 
 ### Resizing of edit box
 
@@ -184,11 +176,48 @@ _Figure 9b: The sorting options menu._
 
 Now, you may choose to sort by name, date of creation, or our new priority option. The currently selected option will be highlighted in mint. The arrow on the left-hand side of the menu ribbon will toggle to sort by ascending OR descending.
 
+### Multiple Lists
+
+We added the ability to create multiple, separate lists, and switch freely between them. To switch lists or create a new list, open the list selection menu by clicking on the triangle to the right of the list's name. Note that you may also click on the title itself and get the same results; the triangle was just used as a visual cue that there is more content.
+
+![The list selection menu.](./screenshots/list-selection.PNG)
+
+_Figure 10a: The list selection menu_
+
+From here, you may choose x to cancel and go back to the previous list, + to create a new list, or check to confirm your selection.  
+If you choose to create a new list, your next screen will look like this:
+
+![A new list has been added.](./screenshots/new-list.PNG)
+
+_Figure 10b: A new list has been added_
+
+And finally, clicking the check mark to confirm will bring you to your new list.
+
+![A new, empty list.](./screenshots/new-list-added.PNG)
+
+_Figure 10c: A new, empty list_
+
+The original list, as well as any other lists you may have, can be viewed by accessing the aforementioned list selection menu.
+
+### Accessibility
+
+Keyboard navigation can be done using the tab key to change selected, and using the enter key to select any buttons. Do note, however, that it is the space key, NOT enter, which is used to mark checkboxes, as is the standard.
+[https://youtu.be/dN2qLjgu9Rw](https://youtu.be/dN2qLjgu9Rw
+)
+
+
+Screen Reader support was added through the addition of numerous aria labels, which describe the function of each button as it is selected.      
+[https://youtu.be/Y6Vc5M991T0](https://youtu.be/dN2qLjgu9Rw
+)
 
 ## Challenges
 One challenge was designing checkboxes that would fit with the overall aesthetic of the rest of our UI. The default checkboxes with HTML don't fit our "dark mode" theme and are inconsistent across browsers. Thus, An adapted some available code for custom checkboxes in order to improve the overall quality of our design.
 
 Another challenge was anchoring the bottom menu bar to the bottom of the screen. Previously, when too many tasks were added, the bar would simply disappear from view, being sent to the bottom of the screen. Now, it will stay visible even when more tasks are added.
+
+Our initial color scheme had to be modified slightly in order to increase contrast to meet accessibility requirements.
+
+All of our "buttons" were originally just images that would perform a function upon click; however, for the screen reader and tab navigation to recognize them as buttons, we had to change them all to true button objects. Figuring out how to reformat them to look nice still was a bit of a challenge.
 
 ## The CROWN JEWEL of our App Design
 The icons that Mads made are our favorite part of the design. We think that the two versions of the eye icon really get the idea of "show uncompleted"/"show all" across without having to use too many words or a messy-looking, complicated icon.
