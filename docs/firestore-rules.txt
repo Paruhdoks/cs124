@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth.uid != null;
+    }
+    
+    function isSharedWithMe() {
+      return request.auth.token.email in resource.data.shared;
+    }
+
+    function isDocOwner() {
+      return resource.data.owner == request.auth.uid;
+    }
+    
+    function newDocOwner() {
+    	return request.resource.data.owner == request.auth.uid;
+    }
+    
+  	match /Lists/{list} {
+    	allow read: if signedIn() && isSharedWithMe();
+      allow update, delete: if signedIn() && isDocOwner();
+      allow create: if signedIn() && newDocOwner();
+    }
+    
+    match /Lists/{list}/{document=**} {
+    	allow read, write: if signedIn() && request.auth.token.email in get(/databases/$(database)/documents/Lists/$(list)).data.shared;
+    }
+  }
+}
